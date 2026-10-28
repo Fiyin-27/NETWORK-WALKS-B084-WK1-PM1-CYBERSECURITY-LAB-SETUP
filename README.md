@@ -25,7 +25,7 @@ The main objectives of this project are to:
 - Install and configure VirtualBox.
 - Build a dedicated NAT Network using the `10.0.0.0/24` address range.
 - Download and set up Kali Linux.
-- Configure Kali Linux with the static IP address `10.0.0.0/24`.
+- Configure Kali Linux with the required IP address.
 - Test the network configuration to confirm connectivity and DNS resolution.
 - Confirm that Kali Linux can access the internet.
 - Save a clean snapshot of the virtual machine to make it easier to restore the environment if needed.
