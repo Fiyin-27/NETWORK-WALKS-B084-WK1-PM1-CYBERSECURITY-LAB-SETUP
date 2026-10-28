@@ -152,7 +152,8 @@ This lab is intended for educational purposes and authorized security testing on
 ---
 
 ## 👧 Author
-Owoseni Fiyinfoluwa Faithfulness
+**Owoseni Fiyinfoluwa Faithfulness**
+
 Cybersecurity Intern at Network Walks
 
 ## 📌 Project Information 
