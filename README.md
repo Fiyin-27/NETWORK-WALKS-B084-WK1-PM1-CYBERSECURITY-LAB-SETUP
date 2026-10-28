@@ -72,7 +72,7 @@ Additional virtual machines may be added for future exercises.
 
 ### Step 1: Install 7-Zip
 
-7-Zip was installed to allow compressed virtual machine files, including Kali Linux packages, to be extracted when required.                                                                        pls write this well..change some words
+7-Zip was installed to extract compressed files needed for the lab setup, including the Kali Linux virtual machine files.                                                   
 
 ### Step 2: Install VirtualBox
 
