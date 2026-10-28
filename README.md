@@ -95,8 +95,6 @@ Download Kali Linux from its official website and import the virtual machine int
 
 Configure the virtual machine's network adapter to use the created NAT Network.
 
-![Kali Linux](screenshots/kali linux setup.png)
-
 ##  Step 5: Configure the Kali Linux Network
 
 Configure Kali Linux to use the required IP address:
