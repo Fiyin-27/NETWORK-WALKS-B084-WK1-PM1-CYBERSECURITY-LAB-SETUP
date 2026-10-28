@@ -32,7 +32,7 @@ The main objectives of this project are to:
 - Record the setup steps and configurations for future reference.
 - Establish a reliable virtual lab for upcoming cybersecurity experiments and practical exercises.
 
-## 🛠️ Tools and Technologies
+## 🛠️ Tools and Purposes
 
 | Tool | Purpose |
 |---|---|
@@ -74,13 +74,12 @@ Additional virtual machines may be added for future exercises.
 
 Download and install 7-Zip if required to extract the Kali Linux virtual machine files.
 
-Download: https://7-zip.org/download.html
-
 ### Step 2: Install VirtualBox
 
 Download and install VirtualBox on the host computer.
 
-Download: https://www.virtualbox.org/wiki/Downloads
+![virtualbox installation](screenshots/virtualbox installation.png)
+
 
 ### Step 3: Create the NAT Network
 
@@ -94,12 +93,11 @@ This network will provide the virtual networking environment for the lab.
 
 Download Kali Linux from its official website and import the virtual machine into VirtualBox.
 
-Download: https://www.kali.org/get-kali/
-
 Configure the virtual machine's network adapter to use the created NAT Network.
 
+![Kali Linux](screenshots/kali linux setup.png)
 
-##  Step 5: Configure the IP Address
+##  Step 5: Configure the Kali Linux Network
 
 Configure Kali Linux to use the required IP address:
 
@@ -107,96 +105,31 @@ Configure Kali Linux to use the required IP address:
 IP Address: 10.0.0.2
 CIDR:       /24
 ```
-
 Check the network settings, gateway, DNS configuration, and connectivity.
-
-
-Check the network settings, gateway, DNS configuration, and connectivity.
-
-### Step 6: Configure Shared Features
-
-Enable the required VirtualBox features:
-
-- Shared clipboard
-- Drag-and-drop
-- Shared folder for the host's `/downloads` folder
-
 Verify that these features work as intended.
 
-### Step 7: Test Connectivity
-
-Use appropriate network commands to verify the configuration.
-
-Check the IP address:
-
-```bash
-ip addr
-```
-
-Check the routing table:
-
-```bash
-ip route
-```
-
-Test gateway connectivity:
-
-```bash
-ping 10.0.0.1
-```
-
-Test internet connectivity:
-
-```bash
-ping 8.8.8.8
-```
-
-Test domain name resolution:
-
-```bash
-nslookup networkwalks.com
-```
-
-The results should be recorded after running the commands. If a test fails, investigate the network configuration before marking it successful.
-
-### Step 8: Take a Virtual Machine Snapshot
+### Step 6: Take a Virtual Machine Snapshot
 
 After the lab has been configured and verified, create a VirtualBox snapshot.
 
 A snapshot provides a recovery point that can be used to return the virtual machine to its saved state.
 
-## 📸 Screenshots
+## 🔎 Lab Verification
 
-Screenshots documenting the practical work will be stored in the `screenshots` folder.
+The lab environment should be tested to confirm that the network settings and shared features are working as expected.
 
-| Screenshot | Description |
-|---|---|
-| `virtual-box-installation.png` | VirtualBox installation |
-| `kali-linux.png` | Kali Linux virtual machine |
-| `nat-network.png` | NAT Network configuration |
-| `network-config.png` | Network configuration |
-| `ip-configuration.png` | Kali Linux IP address |
-| `shared-folder.png` | Shared folder settings |
-| `drag-drop.png` | Clipboard and drag-and-drop settings |
-| `test.png` | Connectivity testing |
+| Test | Command / Check | Expected Result |
+|---|---|---|
+| 🌐 Check IP address | `ip a` | `10.0.0.2/24` displayed |
+| 📡 Test network | `ping 10.0.0.1` | Successful replies |
+| 🌍 Test Internet | `ping 8.8.8.8` | Successful replies |
+| 🔎 Test DNS | `ping google.com` | Domain resolves |
+| 🧰 Verify Nmap | `nmap -- version` | Nmap version displayed|  
+| 📸 Verify snapshot | Check VirtualBox snapshots | Snapshot available |
 
-The filenames above are suggested examples. Use the exact names of the screenshots you upload.
+## 🧠 What I Learned
 
-## 🔍 Verification Checklist
-
-- [ ] VirtualBox installed.
-- [ ] Kali Linux imported and running.
-- [ ] NAT Network configured.
-- [ ] Required IP address configured.
-- [ ] Internet connectivity tested.
-- [ ] Shared folder configured.
-- [ ] Clipboard and drag-and-drop tested.
-- [ ] Virtual machine snapshot created.
-- [ ] Screenshots uploaded to GitHub.
-
-## 🧠 What I Aim to Learn
-
-Through this project, I aim to improve my understanding of:
+Through this project, I improved my understanding of:
 
 - Virtualization and virtual machines.
 - Basic network configuration.
@@ -218,8 +151,13 @@ This lab is intended for educational purposes and authorized security testing on
 
 ---
 
-**Project:** WK1-PM1  
-**Module:** Cybersecurity Lab Setup  
-**Environment:** VirtualBox and Kali Linux
+## 👧 Author
+Owoseni Fiyinfoluwa Faithfulness
+Cybersecurity Intern at Network Walks
 
+## 📌 Project Information 
 
+**Project:** Cybersecurity & Penetesting Lab Setup|
+**Week:** 01|
+**Program Name:** Cybersecurity at Networkwalks|
+**Repository:** Github
