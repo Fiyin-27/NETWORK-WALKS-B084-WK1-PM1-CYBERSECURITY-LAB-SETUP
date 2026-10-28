@@ -72,51 +72,58 @@ Additional virtual machines may be added for future exercises.
 
 ### Step 1: Install 7-Zip
 
-Download and install 7-Zip if required to extract the Kali Linux virtual machine files.
+7-Zip was installed to allow compressed virtual machine files, including Kali Linux packages, to be extracted when required.                                                                        pls write this well..change some words
 
 ### Step 2: Install VirtualBox
 
-Download and install VirtualBox on the host computer.
+VirtualBox was installed on the host computer as the hypervisor.
 
-![virtualbox installation](screenshots/virtualbox installation.png)
-
+![VirtualBox Installation](screenshots/virtualbox%20installation.png)
 
 ### Step 3: Create the NAT Network
 
-Create a NAT Network in VirtualBox with the required subnet:
+A dedicated NAT Network was created in VirtualBox with the required subnet:
 
 `10.0.0.0/24`
 
-This network will provide the virtual networking environment for the lab.
+![NAT Network Settings](screenshots/natnetwork.png)
+
+A NAT Network was configured to enable communication between multiple virtual machines within the cybersecurity lab while providing outbound connectivity to external networks. This setup offers flexibility for future lab exercises, allowing additional attacker and target machines to be connected and interact within the same virtual environment.
 
 ### Step 4: Set Up Kali Linux
 
-Download Kali Linux from its official website and import the virtual machine into VirtualBox.
+Kali Linux was downloaded from its official website and imported into VirtualBox.
 
-Configure the virtual machine's network adapter to use the created NAT Network.
+![Kali Linux Setup](screenshots/kali%20linux%20setup.png)
 
 ##  Step 5: Configure the Kali Linux Network
 
-Configure Kali Linux to use the required IP address:
+Kali Linux was configured to use the required IP address:
 
 ```text
 IP Address: 10.0.0.2
-CIDR:       /24
+CIDR: /24
+Gateway: 10.0.0.1
+DNS: 8.8.8.8 
 ```
-Check the network settings, gateway, DNS configuration, and connectivity.
-Verify that these features work as intended.
+The network configuration was reviewed to confirm the gateway settings, DNS resolution, and overall connectivity, ensuring that all network components were functioning as expected.
 
-### Step 6: Take a Virtual Machine Snapshot
+![Kali IP Configuration](screenshots/kali%20ip%20configuration.png)
 
-After the lab has been configured and verified, create a VirtualBox snapshot.
+### Step 6: Create a Virtual Machine Snapshot
 
-A snapshot provides a recovery point that can be used to return the virtual machine to its saved state.
+After the lab has been configured and verified, a VirtualBox snapshot was created.
+
+The snapshot provides a recovery point that can be used to return the virtual machine to its saved state.
+```text
+Kali-Linux-Initial-Setup
+```
 
 ## 🔎 Lab Verification
 
-The lab environment should be tested to confirm that the network settings and shared features are working as expected.
+The lab environment was tested to confirm that the network settings and shared features were working as expected.
 
-| Test | Command / Check | Expected Result |
+| ✅ Test | 📜 Command | 🎯 Expected Result |
 |---|---|---|
 | 🌐 Check IP address | `ip a` | `10.0.0.2/24` displayed |
 | 📡 Test network | `ping 10.0.0.1` | Successful replies |
@@ -125,26 +132,40 @@ The lab environment should be tested to confirm that the network settings and sh
 | 🧰 Verify Nmap | `nmap -- version` | Nmap version displayed|  
 | 📸 Verify snapshot | Check VirtualBox snapshots | Snapshot available |
 
-## 🧠 What I Learned
+## 💡 What I Learned
 
-Through this project, I improved my understanding of:
+This project provided hands-on experience in preparing a virtual environment for cybersecurity practice and understanding the basic configurations required to build a functional lab.
 
-- Virtualization and virtual machines.
-- Basic network configuration.
-- IPv4 addressing and subnetting.
-- NAT Network functionality.
-- Kali Linux administration.
-- Cybersecurity lab preparation.
-- Technical documentation using GitHub.
+Some of the key things i learned from this project include:
+
+### 1. Setting Up a Virtual Environment
+
+I learned how to use VirtualBox to run Kali Linux on my computer without replacing my main operating system. This gave me a separate environment where I could configure the system and prepare it for cybersecurity practice.
+
+### 2. Setting Up the Lab Network
+
+I learned how to create a NAT Network in VirtualBox and connect my Kali Linux VM to it. This will make it possible to add other virtual machines to the lab and allow them to communicate with one another.
+
+### 3. IP Addressing and Network Checks
+
+I learned how IP addresses and subnet masks are used to identify devices on a network. I also checked the gateway, DNS settings, and connectivity to make sure the Kali Linux VM could connect to the network properly.
+
+### 4. Managing Virtual Machines
+
+I learned how to import Kali Linux into VirtualBox, adjust its settings, configure the network adapter, and take snapshots. I also understood how snapshots can help me return to a previous state if something goes wrong during future lab exercises.
+
+### 5. Lab Documentation
+
+I learned how to document the lab setup by keeping screenshots and important configuration details. This will help me remember the steps I followed and make it easier to fix problems or set up the lab again in the future.
 
 ## 🔐 Ethical Use
 
-This lab is intended for educational purposes and authorized security testing only. Any future security assessments should be conducted on systems I own or have explicit permission to test.
+This lab was set up for cybersecurity learning and practice in a safe environment. All testing activities will be performed responsibly and only on systems I own or have received proper authorization to test.
 
-## 📚 References
+## 🔗 Tools & Resources
 
-- VirtualBox: https://www.virtualbox.org/wiki/Downloads
-- Kali Linux: https://www.kali.org/get-kali/
+- VirtualBox: https://virtualbox.org/wiki/Downloads
+- Kali Linux: https://kali.org/get-kali
 - 7-Zip: https://7-zip.org/download.html
 
 ---
